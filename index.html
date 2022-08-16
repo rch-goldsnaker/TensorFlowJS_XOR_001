@@ -4,9 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Machine Learning Exercise</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen" />
+
+    <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    
 </head>
 <body>
-    TEST
+    <div class="Main">
+        <div class="headerMain">
+            <h1>Machine Learning - TensorFlow.js</h1>
+        </div>
+        <div class="contentMain">
+            <div class="Menu">
+                <div class="card">
+                    <div class="cardTitle">Problem</div>
+                    <div class="cardContent">
+                        <p>Solve the XOR logic exercise using Machine Learning.</p>
+                        <img src="/images/xor.jpg" width="100%" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="side">
+                <div class="card">
+                    <div class="cardTitle">Define inputs and outputs</div>
+                    <div class="cardContent">
+                        <p>we have two inputs A and B, and each variable can take 2 values ​​0 and 1.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardTitle">Training</div>
+                    <div class="cardContent">
+                        <p id="divCiclosDeAprendizaje">Learning cycles: 0 </p>
+                        <p>Press the button to train the neural network</p>
+
+                        <input type="button" id="myButton531" value="Training" onclick="{aprendeXor()}">
+
+                        <div id="divEntrenamiento"><br></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardTitle">Testing</div>
+                    <div class="cardContent">
+                        <p>Press the button to testing:</p>
+                        <input type="button" id="myButton531" value="Testing" onclick="pruebaXor();"><br>
+                        <div id='divPrueba'>...</div><br>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardTitle">Graphic</div>
+                    <div class="cardContent">
+                        <div id="neuralNet"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Tensorflow -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0"> </script>
+<script src="/js/nnTF.js"></script>
+<script src="tradFunction.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="/js/drawNetwork.js"></script>
+
 </body>
 </html>
